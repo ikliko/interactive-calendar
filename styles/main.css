@@ -1,0 +1,182 @@
+.calendar-events {
+    background: #f5f7f6;
+    display: flex;
+    justify-content: space-between;
+    max-width: 927px;
+}
+
+.calendar-events .nav-calendar {
+    width: 30%;
+}
+
+
+.calendar-events .nav-calendar .nav-header {
+    padding: 20px;
+    display: flex;
+}
+
+.calendar-events .nav-calendar .nav-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-events .nav-calendar .nav-control {
+    margin-left: 20px;
+}
+
+.nav-calendar .burger {
+    margin-right: 20px;
+}
+
+.nav-calendar .burger div {
+    width: 30px;
+    height: 1px;
+    background-color: black;
+    margin: 5px 0;
+}
+
+.nav-calendar .events-wrapper {
+    min-width: 265px;
+    background: linear-gradient(120deg, #eff3f3, #e1e7e8);
+    padding-left: 20px;
+}
+
+.nav-calendar .events-wrapper .today-date {
+    text-align: center;
+}
+
+.nav-calendar .events-wrapper .today-date .time {
+    font-size: 39px;
+    font-weight: bolder;
+}
+
+.nav-calendar .events-wrapper .today-date .date {
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.nav-calendar .events-wrapper .events-list {
+    max-height: 301px;
+    overflow: auto;
+}
+
+.nav-calendar .events-wrapper .events-list .event-list-group .event-list-group-header {
+    font-size: 12px;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.nav-calendar .events-wrapper .events-list .event-list-group .event-list-group-body .event {
+    position: relative;
+    border-bottom: 1px solid #000;
+}
+
+.nav-calendar .events-wrapper .events-list .event-list-group .event-list-group-body .event .event-title {
+    text-indent: 40px;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+.nav-calendar .events-wrapper .events-list .event-list-group .event-list-group-body .event .event-time {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.nav-calendar .events-wrapper .events-list .event-list-group .event-list-group-body .event .event-info {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.nav-calendar .events-wrapper .events-list .event-list-group .event-list-group-body .event .event-participants {
+    font-size: 11px;
+}
+
+#calendar {
+    padding: 20px;
+    width: 70%;
+}
+
+#calendar > table.fc-header {
+    display: none;
+}
+
+/*#calendar > table.fc-header > tbody > tr > td.fc-header-left {*/
+/*    padding: 5px 0 0 15px;*/
+/*}*/
+
+#calendar > table > tbody > tr > td.fc-header-right {
+    text-align: right;
+    padding: 10px 15px 10px 0;
+}
+
+#calendar > table > tbody > tr > td.fc-header-left > span.fc-header-title {
+    color: #adad9a;
+}
+
+#calendar > table > tbody > tr > td.fc-header-right > span.fc-button:not(:last-child) {
+    margin-right: 15px;
+}
+
+#calendar > table > tbody > tr > td.fc-header-right > span.fc-button {
+    color: #adad9a;
+    padding: 5px 15px;
+    /*border: 1px solid #adad9a;*/
+    /*border-radius: 5px;*/
+    cursor: pointer;
+}
+
+#calendar > div > div > table > tbody > tr.fc-week:not(.fc-last),
+#calendar > div > div > table > thead > tr {
+    /*border-bottom: 1px solid #adad9a;*/
+}
+
+#calendar > div > div > table > tbody > tr.fc-week > td.fc-day:not(.fc-last) {
+    /*border-right: 1px solid #adad9a;*/
+}
+
+#calendar > div > div > table > thead > tr > th.fc-day-header {
+    color: #1d1d17;
+    text-align: center;
+}
+
+#calendar > div > div > table > tbody > tr.fc-week > td.fc-day {
+    cursor: pointer;
+}
+
+#calendar > div > div > table > tbody > tr.fc-week > td.fc-day > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #282820;
+}
+
+#calendar > div > div > table > tbody > tr.fc-week > td.fc-day:hover > div,
+#calendar > div > div > table > tbody > tr.fc-week > td.fc-day.fc-today > div {
+    color: #070706;
+    font-weight: bolder;
+    font-size: large;
+}
+
+#calendar > div > div > table > tbody > tr.fc-week > td.fc-day.fc-other-month > div {
+    color: #94948C;
+}
+
+
+@media screen and (max-width: 500px) {
+    .calendar-events {
+        flex-direction: column-reverse;
+    }
+
+    .calendar-events .nav-calendar {
+        width: 100%;
+    }
+
+    .calendar-events #calendar {
+        width: 100%;
+    }
+}

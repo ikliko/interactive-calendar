@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kliko | Interactive Calendar</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/fullcalendar.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+
+<div class="calendar-events">
+    <div class="nav-calendar">
+        <div class="nav-header">
+            <div class="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <div class="breadcrumbs">
+                Calendar > May 2019
+            </div>
+        </div>
+
+        <div class="nav-controls">
+            <div class="nav-control">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAWUlEQVRYR+2WMQoAIAgA9f+PrsWmEMQSEa7Z8rzEUmle2pxfABhvYFkPpQtJb7TEAGAAAxgoM3AO/v1YXoPPm4TtANHKy64AAAxgAANjDERB3bjXXzEA8w1s3k4WIU0YaEoAAAAASUVORK5CYII="
+                     alt="">
+            </div>
+            <div class="nav-control">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB+klEQVRYR+2W0VEdMQxFDxUQKoBUkFABUAFQAaGDUEFCBQkVABUAFRAqgFRAUgFQQTJnxprx2/V67f3h5+nnzfNK8vXVteQN3tk23nl/1gCWMrAD/AD2UwlvgTPgtbekSwB8AJ4Bf3Nz84+9IJYAuAJOgAfgKGNgD7gGvvSwsATAH2Ab2MpOKxsvgN9kodl6AHha6279tRyAa5ZFE4R6UBez1gogaM8T/gKO08JNJsjw+ZmAVEG0AMg3Pwf8/wRsDjK/AZ+TBr6lbxfA1xqCOQDS7um0A8BTa1L+fSBC/0u/lsfJ0mQ55gCE4KyplPaYJ1czVWHWAHidLoG/mfB6AIQgvTGnqXSj+BoAaTusBTegCRbusnKthNUABP157Rv2XHGxVd/XylAD8C+lmtNJDVQ0KH2KeaaSDxuL104hhsrnmIhh5bWMxmWHHMWXABjwODFsdhtAdMWXANSGzaSYMkpCvE3DqgQgar902DiW7ZKl+JEWSgBKCUITttvhO2Coh1r8qKeUAASFpWHTMu+jhKX4UQmnRFgaNp7Ufu9Aqpk+MYxyP9mTyZVnW+0a2vu9RrZSBeWLJ9qr31wTqKaf3+18ce0iRtr1s7WP3ow9TcauJr0CqpkbullMzqpzD4BIZHLBeOpPafF3OqWbCrLZlgBoTt7iuAawZuA/xAh3Ifk/Dm0AAAAASUVORK5CYII="
+                     alt="">
+            </div>
+            <div class="nav-control">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAxklEQVRYR+3VwQ2DMAyF4Z8NOkI36AodpZ2sjMAoHaWdoJWlIEXI4RHnwMWROAH2ZxuSiZPXdHJ+EjDagUcZ4Rwd5QjAkr9K4icQQkQBdfK1+BAiAvCShxG9gG3b6xGExtED8Gb+K6VbnNA3cRTQCl4DzNKNOALYC7oFdCMUQFXkAboQCvAGbkDrF2sBasQXuAIfb7NSgAtwB5bGTrcHWBFWhF3uUgC1wyqAen/4NExAdiA7kB3IDmQH5GGjHhg9DVV8eT8Bf2HqNiEP+isaAAAAAElFTkSuQmCC"
+                     alt="">
+            </div>
+            <div class="nav-control">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA4UlEQVRYR+2WgQnCMBBFXzdwBSdwBUfRyXQER3EUN1AOEgnxLrkkhYCkUFpI7/+Xf1fajcnHNtmfBTCawDu0sFunuzAYL4CVwEpgJbAS+P8EDsAZeBj/DbUELsAznKpE7WMkxSfgCtwVhRKAmN+AF3AM1x+JGkAUkUINwgKo1X1BagDyYElMA3Cbi7gHoASRAzSZtwBYEClAs3krgAYhQxbnI73XBrbrLdCK0p3m69bbYv79e2cgF9Agms17WpCCdPU830lvAlFHIORw93xvALO33oXRBLw+uw/hsHEUmJ7ABzErNiGyzfJcAAAAAElFTkSuQmCC"
+                     alt="">
+            </div>
+        </div>
+
+        <div class="events-wrapper">
+            <div class="today-date">
+                <div class="time">13:40</div>
+                <div class="date">Wednesday, April 23</div>
+            </div>
+
+            <div class="events-list">
+                <div class="event-list-group">
+                    <div class="event-list-group-header">
+                        upcoming events
+                    </div>
+
+                    <div class="event-list-group-body">
+                        <div class="event">
+                            <div class="event-time" style="color: red;">
+                                13:00
+                            </div>
+
+                            <div class="event-title">
+                                This is long text in title that must be on two or more lines
+                            </div>
+
+                            <div class="event-info">
+                                Short description of the event
+                            </div>
+
+                            <div class="event-participants">
+                                <a href="#">Josue Neptune</a>,
+                                <a href="#">Crissy Purington</a>,
+                                <a href="#">Dennis Fargo</a>,
+                                <a href="#">Byron Somerville</a>,
+                                <a href="#">April Abboud</a>
+                            </div>
+                        </div>
+
+                        <div class="event">
+                            <div class="event-time" style="color: red;">
+                                13:00
+                            </div>
+
+                            <div class="event-title">
+                                This is long text in title that must be on two or more lines
+                            </div>
+
+                            <div class="event-info">
+                                Short description of the event
+                            </div>
+
+                            <div class="event-participants">
+                                <a href="#">Josue Neptune</a>,
+                                <a href="#">Crissy Purington</a>,
+                                <a href="#">Dennis Fargo</a>,
+                                <a href="#">Byron Somerville</a>,
+                                <a href="#">April Abboud</a>
+                            </div>
+                        </div>
+
+                        <div class="event">
+                            <div class="event-time" style="color: red;">
+                                13:00
+                            </div>
+
+                            <div class="event-title">
+                                This is long text in title that must be on two or more lines
+                            </div>
+
+                            <div class="event-info">
+                                Short description of the event
+                            </div>
+
+                            <div class="event-participants">
+                                <a href="#">Josue Neptune</a>,
+                                <a href="#">Crissy Purington</a>,
+                                <a href="#">Dennis Fargo</a>,
+                                <a href="#">Byron Somerville</a>,
+                                <a href="#">April Abboud</a>
+                            </div>
+                        </div>
+
+                        <div class="event">
+                            <div class="event-time" style="color: red;">
+                                13:00
+                            </div>
+
+                            <div class="event-title">
+                                This is long text in title that must be on two or more lines
+                            </div>
+
+                            <div class="event-info">
+                                Short description of the event
+                            </div>
+
+                            <div class="event-participants">
+                                <a href="#">Josue Neptune</a>,
+                                <a href="#">Crissy Purington</a>,
+                                <a href="#">Dennis Fargo</a>,
+                                <a href="#">Byron Somerville</a>,
+                                <a href="#">April Abboud</a>
+                            </div>
+                        </div>
+
+                        <div class="event">
+                            <div class="event-time" style="color: red;">
+                                13:00
+                            </div>
+
+                            <div class="event-title">
+                                This is long text in title that must be on two or more lines
+                            </div>
+
+                            <div class="event-info">
+                                Short description of the event
+                            </div>
+
+                            <div class="event-participants">
+                                <a href="#">Josue Neptune</a>,
+                                <a href="#">Crissy Purington</a>,
+                                <a href="#">Dennis Fargo</a>,
+                                <a href="#">Byron Somerville</a>,
+                                <a href="#">April Abboud</a>
+                            </div>
+                        </div>
+
+                        <div class="event">
+                            <div class="event-time" style="color: red;">
+                                13:00
+                            </div>
+
+                            <div class="event-title">
+                                This is long text in title that must be on two or more lines
+                            </div>
+
+                            <div class="event-info">
+                                Short description of the event
+                            </div>
+
+                            <div class="event-participants">
+                                <a href="#">Josue Neptune</a>,
+                                <a href="#">Crissy Purington</a>,
+                                <a href="#">Dennis Fargo</a>,
+                                <a href="#">Byron Somerville</a>,
+                                <a href="#">April Abboud</a>
+                            </div>
+                        </div>
+
+                        <div class="event">
+                            <div class="event-time" style="color: red;">
+                                13:00
+                            </div>
+
+                            <div class="event-title">
+                                This is long text in title that must be on two or more lines
+                            </div>
+
+                            <div class="event-info">
+                                Short description of the event
+                            </div>
+
+                            <div class="event-participants">
+                                <a href="#">Josue Neptune</a>,
+                                <a href="#">Crissy Purington</a>,
+                                <a href="#">Dennis Fargo</a>,
+                                <a href="#">Byron Somerville</a>,
+                                <a href="#">April Abboud</a>
+                            </div>
+                        </div>
+
+                        <div class="event">
+                            <div class="event-time" style="color: red;">
+                                13:00
+                            </div>
+
+                            <div class="event-title">
+                                This is long text in title that must be on two or more lines
+                            </div>
+
+                            <div class="event-info">
+                                Short description of the event
+                            </div>
+
+                            <div class="event-participants">
+                                <a href="#">Josue Neptune</a>,
+                                <a href="#">Crissy Purington</a>,
+                                <a href="#">Dennis Fargo</a>,
+                                <a href="#">Byron Somerville</a>,
+                                <a href="#">April Abboud</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="calendar"></div>
+</div>
+
+<script src="js/index.js"></script>
+</body>
+</html>
